@@ -589,3 +589,13 @@ body::after{background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 2px,
   .side__three b{color:var(--gold)}
   .side__nav a{border-color:var(--gold)}
 }
+
+/* 人気アイテムチェック：箱から商品写真が飛び出す */
+.box::after{width:104px;height:104px;margin-left:-52px;bottom:24px;background:#fff var(--face) center/86% no-repeat;border:3px solid var(--ink);border-radius:50%;box-shadow:0 6px 0 rgba(0,0,0,.12)}
+.box.is-open::after{transform:translateY(-56px) scale(1)}
+.swap__out{margin-top:56px}
+@media (max-width:520px){
+  .box::after{width:84px;height:84px;margin-left:-42px}
+  .box.is-open::after{transform:translateY(-44px) scale(1)}
+  .swap__out{margin-top:46px}
+}

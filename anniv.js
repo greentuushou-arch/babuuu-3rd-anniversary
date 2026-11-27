@@ -41,7 +41,7 @@
     });
   });
 
-  /* パーティーのプレゼント交換：箱を選ぶと、動物がおすすめ商品を持ってくる */
+  /* 人気アイテムチェック：箱を選ぶと、中から人気商品が飛び出す */
   const data = window.PICKS;
   const out = document.getElementById('swapOut');
   const boxes = Array.from(document.querySelectorAll('.box'));
@@ -62,9 +62,9 @@
     const show = (box, it, face) => {
       box.classList.remove('is-shake');
       box.classList.add('is-open');
-      box.style.setProperty('--face', 'url("images/il/face-' + face + '.png")');
+      box.style.setProperty('--face', 'url("' + it.img + '")');
       out.innerHTML =
-        '<p class="swap__hi"><img src="images/il/face-' + face + '.png" alt="" width="64" height="64"><span>これ、おすすめだよ！</span></p>' +
+        '<p class="swap__hi"><img src="images/il/face-' + face + '.png" alt="" width="64" height="64"><span>人気アイテムはこれ！</span></p>' +
         '<a class="swap__card" href="' + esc(it.url) + '" target="_blank" rel="noopener">' +
         '<img src="' + esc(it.img) + '" alt="' + esc(it.name) + '" width="600" height="600">' +
         '<span class="swap__b"><em class="rec__cp rec__cp--' + esc(it.cp) + '">キャンペーン' + esc(it.cp) + ' 対象</em>' +
