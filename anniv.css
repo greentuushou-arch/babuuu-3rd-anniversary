@@ -611,3 +611,15 @@ body::after{background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 2px,
   .pt__party{font-size:92px;bottom:-4px}
   .guest--3{bottom:118px}
 }
+
+/* 商品カードの下：特典の帯とボタンはカードの内側に収める（角丸がカードに切られないように） */
+.pi__perk{margin:12px 14px 0;border-radius:14px}
+.pi__go{display:flex;align-items:center;justify-content:center;gap:10px;margin:12px 14px 16px;padding:13px 52px 13px 20px;background:var(--xred);border-radius:999px;box-shadow:0 4px 0 var(--xred-d);font-size:17px;letter-spacing:.1em;transition:transform .15s,box-shadow .15s}
+.pi__go::after{right:8px;width:32px;height:32px;margin-top:-16px;border:0;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l6 6-6 6' fill='none' stroke='%23C8102E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/18px no-repeat;transform:none}
+.pi__go:hover,.pi__go:focus-visible{background:var(--xred);transform:translateY(2px);box-shadow:0 2px 0 var(--xred-d)}
+.pi__go[aria-disabled]{background:#B9BFC3;box-shadow:0 4px 0 #9AA0A5}
+.pi__go[aria-disabled]::after{background-color:#fff;opacity:.7}
+@media (max-width:520px){
+  .pi__perk{margin:10px 12px 0}
+  .pi__go{margin:10px 12px 14px;font-size:16px}
+}
