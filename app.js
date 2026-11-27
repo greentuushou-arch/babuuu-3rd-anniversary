@@ -61,7 +61,7 @@
     else if (now < new Date(s.finalDate).getTime()) state = '投票は終了しました';
     else state = '結果発表中';
     $('senkyoState').textContent = state;
-    $('senkyoSched').innerHTML = '<span class="nw">途中経過 ' + jst(s.firstUpdate).md + '(' + jst(s.firstUpdate).wd + ')から</span>　<span class="nw">結果発表 ' + jst(s.finalDate).md + '(' + jst(s.finalDate).wd + ')</span>';
+    $('senkyoSched').innerHTML = '<span class="nw">途中経過は随時更新</span>　<span class="nw">結果発表 ' + jst(s.finalDate).md + '(' + jst(s.finalDate).wd + ')</span>';
     $('senkyoNote').textContent = '投票すると、' + jst(s.couponStart).md + '〜' + jst(s.couponEnd).md + 'に店内で使えるクーポンを獲得できます';
     const board = $('board');
     for (let i = 0; i < 12; i++) {
