@@ -575,3 +575,17 @@ button.guest{padding:0;border:0;background:none;cursor:pointer;font:inherit}
   .boxes{margin-top:58px}
   .box.is-open .box__lid{transform:translate(16px,-40px) rotate(22deg)}
 }
+
+/* PCの両脇：センターより深い赤＋降る雪（雪はページの後ろだけに見える） */
+body{background:#8E0C1F}
+.page{position:relative;z-index:1}
+body::before,body::after{content:"";position:fixed;left:0;right:0;top:-600px;bottom:0;pointer-events:none;z-index:0}
+body::before{background-image:radial-gradient(circle,rgba(255,255,255,.9) 0 3px,transparent 4px),radial-gradient(circle,rgba(255,255,255,.7) 0 2px,transparent 3px),radial-gradient(circle,rgba(255,255,255,.8) 0 4px,transparent 5px);background-size:180px 200px,130px 150px,260px 300px;background-position:20px 0,90px 40px,150px 120px;animation:snowA 18s linear infinite}
+body::after{background-image:radial-gradient(circle,rgba(255,255,255,.55) 0 2px,transparent 3px),radial-gradient(circle,rgba(255,255,255,.45) 0 1.5px,transparent 2.5px);background-size:110px 120px,70px 90px;background-position:40px 10px,0 60px;animation:snowB 26s linear infinite}
+@keyframes snowA{to{background-position:60px 600px,130px 640px,210px 720px}}
+@keyframes snowB{to{background-position:10px 600px,30px 660px}}
+@media (min-width:1180px){
+  .side__three{color:var(--cream)}
+  .side__three b{color:var(--gold)}
+  .side__nav a{border-color:var(--gold)}
+}
