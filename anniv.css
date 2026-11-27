@@ -465,3 +465,9 @@ body{background:#EFE7DA}
   .pt__ja{font-size:40px;letter-spacing:.02em;white-space:nowrap}
   .guest--3{bottom:58px;right:2%}
 }
+
+/* 文字の縁取りは基本なし（FVの「PARTY」は線だけの文字なので残す） */
+.cp--disney .cp__ttl,.cp__no,.tile__no b,.side__three b{-webkit-text-stroke:0}
+.cp__no{text-shadow:none}
+.cp--newborn .cp__no{color:#B88A2C}
+.cp--newborn .cp__no small{color:var(--ink)}
