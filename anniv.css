@@ -495,3 +495,83 @@ body{background:var(--gold)}
   .side__cal li span{display:block;margin-top:4px;padding:0;background:none;color:var(--ink);font-weight:700;font-size:15px;line-height:1.4}
   .side__cal li em{display:block;margin-top:4px;font-style:normal;font-weight:700;font-size:16px;color:var(--c)}
 }
+
+/* ===== 右レール：おすすめアイテム ===== */
+@media (min-width:1180px){
+  .side__rec{padding:18px 14px 16px;background:var(--cream);border-radius:24px;text-align:left}
+  .side__rec-en{text-align:center;font:600 14px/1 var(--num);letter-spacing:.3em;color:var(--xred)}
+  .side__rec h2{margin-top:6px;text-align:center;font-weight:800;font-size:19px;letter-spacing:.1em}
+  .rec{display:grid;grid-template-columns:74px 1fr;gap:10px;align-items:center;margin-top:10px;padding:8px;background:#fff;border-radius:16px;text-decoration:none;transition:transform .15s}
+  .rec:hover{transform:translateX(-4px)}
+  .rec img{width:74px;height:74px;object-fit:contain;border-radius:10px}
+  .rec__b{display:flex;flex-direction:column;gap:2px;line-height:1.35}
+  .rec__n{font-weight:700;font-size:14px}
+  .rec__p{font-weight:700;font-size:14px}
+  .rec__p b{font:600 22px/1 var(--num);color:var(--xred);margin-right:1px}
+}
+.rec__cp{align-self:flex-start;padding:0 8px;border-radius:999px;font-style:normal;font-weight:700;font-size:14px;color:#fff;background:var(--gold)}
+.rec__cp--02{background:#B88A2C}
+.rec__cp--03{background:var(--xgreen)}
+
+/* ===== FVの動物：タップであいさつ ===== */
+button.guest{padding:0;border:0;background:none;cursor:pointer;font:inherit}
+.guest::after{content:attr(data-hi);position:absolute;left:50%;bottom:92%;transform:translate(-50%,6px) scale(.6);padding:4px 12px;background:#fff;color:var(--xred);border-radius:999px;font-weight:800;font-size:15px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s,transform .25s cubic-bezier(.2,1.6,.4,1);z-index:3}
+.guest.is-hi::after{opacity:1;transform:translate(-50%,0) scale(1)}
+.guest.is-hi img{animation:wiggle .5s ease-in-out}
+@keyframes wiggle{25%{transform:rotate(-10deg)}75%{transform:rotate(10deg)}}
+.guest:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:50%}
+
+/* ===== プレゼント交換 ===== */
+.swap{background:var(--cream)}
+.swap .h-en{color:var(--xred)}
+.swap__lead{margin-top:10px;font-weight:700;font-size:17px}
+.boxes{display:flex;justify-content:center;gap:22px;margin-top:40px}
+.box{position:relative;width:132px;height:132px;padding:0;border:0;background:none;cursor:pointer}
+.box:disabled{cursor:default}
+.box__body{position:absolute;left:8px;right:8px;bottom:0;height:88px;background:var(--b) linear-gradient(90deg,transparent 42%,var(--rb) 42% 58%,transparent 58%);border-radius:6px}
+.box__lid{position:absolute;left:0;right:0;top:20px;height:30px;background:var(--b) linear-gradient(90deg,transparent 42%,var(--rb) 42% 58%,transparent 58%);border-radius:6px;z-index:2;transition:transform .45s cubic-bezier(.2,1.4,.4,1)}
+.box__lid::before,.box__lid::after{content:"";position:absolute;top:-22px;width:30px;height:24px;border:7px solid var(--rb)}
+.box__lid::before{left:calc(50% - 32px);border-radius:50% 50% 0 50%}
+.box__lid::after{right:calc(50% - 32px);border-radius:50% 50% 50% 0}
+.box::after{content:"";position:absolute;left:50%;bottom:30px;width:76px;height:76px;margin-left:-38px;background:var(--face) center/contain no-repeat;opacity:0;transform:translateY(20px) scale(.5);transition:opacity .3s .15s,transform .45s cubic-bezier(.2,1.6,.4,1) .15s;z-index:1}
+.box:not(:disabled):hover .box__lid{transform:translateY(-6px)}
+.box.is-shake{animation:shake .65s ease-in-out}
+.box.is-open .box__lid{transform:translate(18px,-62px) rotate(24deg)}
+.box.is-open::after{opacity:1;transform:translateY(-30px) scale(1)}
+.boxes:has(.is-open) .box:not(.is-open){opacity:.4}
+@keyframes shake{20%{transform:rotate(-8deg)}40%{transform:rotate(8deg)}60%{transform:rotate(-6deg)}80%{transform:rotate(4deg)}}
+.swap__out{max-width:460px;margin:30px auto 0}
+.swap__out.is-in{animation:rise .5s cubic-bezier(.2,1.2,.4,1)}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}}
+.swap__hi{display:flex;justify-content:center;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--xred)}
+.swap__hi img{width:56px;height:auto}
+.swap__card{display:grid;grid-template-columns:42% 1fr;align-items:center;margin-top:12px;background:#fff;border:3px solid var(--ink);border-radius:22px;overflow:hidden;text-decoration:none;text-align:left}
+.swap__card img{width:100%;height:100%;aspect-ratio:1;object-fit:contain;border-right:3px solid var(--ink)}
+.swap__b{display:flex;flex-direction:column;gap:2px;padding:12px 14px;line-height:1.4}
+.swap__brand{font-size:14px;color:#6A7075}
+.swap__name{font-weight:800;font-size:18px}
+.swap__price{font-weight:800;font-size:16px}
+.swap__price b{font:600 34px/1.1 var(--num);color:var(--xred)}
+.swap__price small{display:block;font-size:14px;font-weight:600;color:#4A4F54}
+.swap__go{margin-top:6px;padding:8px 12px;background:var(--ink);color:#fff;border-radius:999px;text-align:center;font-weight:800;font-size:15px}
+.swap__again{margin-top:16px;padding:10px 26px;background:none;border:3px solid var(--ink);border-radius:999px;font:800 16px/1 var(--goth);color:var(--ink);cursor:pointer}
+.soon{background:#fff}
+
+/* ===== スクロールで登場 ===== */
+.js-rv .rv{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .7s cubic-bezier(.2,1,.3,1)}
+.js-rv .rv.is-in{opacity:1;transform:none}
+
+@media (max-width:520px){
+  .boxes{gap:10px}
+  .box{width:96px;height:110px}
+  .box__body{height:70px;left:6px;right:6px}
+  .box__lid{top:20px;height:24px}
+  .box::after{width:60px;height:60px;margin-left:-30px}
+  .swap__lead{font-size:16px}
+  .swap__card{grid-template-columns:1fr}
+  .swap__card img{border-right:0;border-bottom:3px solid var(--ink);aspect-ratio:4/3}
+}
+@media (max-width:520px){
+  .boxes{margin-top:58px}
+  .box.is-open .box__lid{transform:translate(16px,-40px) rotate(22deg)}
+}
