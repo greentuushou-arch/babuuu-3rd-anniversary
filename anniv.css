@@ -1,0 +1,272 @@
+/* babuuu. 3周年記念 キャンペーン会場 v3
+   構成: FV → 3つのキャンペーン早見表(タイル＋12月のスケジュール) → 01ディズニー傘 → 02新生児 → 03初めてのトライ → 総選挙の告知帯 → しめ
+   参考: Daytona Park 17th/18th・PLAZA 60th（ベタの色面・巨大な数字・角丸の重なり・顔のあるキャラ）
+   babuuu.の墨#4A4F54と黄/ピンク/青、Noto Sans JP＋Jost。紙吹雪・跳ねる文字・傾いたラベルはなし */
+:root{--col:640px;--ink:#4A4F54;--cream:#FFF7E6;--yellow:#FFCB2E;--yellow-l:#FFE285;--yellow-p:#FFF6D6;--pink:#FF6B97;--pink-d:#EC5586;--pink-l:#FFB9CD;--pink-p:#FFE4EC;--blue:#6FC0E4;--blue-d:#2E9BD0;--blue-l:#CDEAF6;--goth:"Noto Sans JP","Hiragino Sans",sans-serif;--num:"Jost",sans-serif;--r:36px}
+*{box-sizing:border-box;margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--pink-p);color:var(--ink);font:500 17px/1.8 var(--goth);letter-spacing:.06em;text-align:center;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%}
+.nw{display:inline-block;white-space:nowrap}
+.page{max-width:var(--col);margin:0 auto;background:var(--cream);overflow:hidden}
+.demo{background:var(--ink);color:#fff;font-size:14px;line-height:2.2}
+
+/* ========== FV ========== */
+.fv{position:relative;background:var(--cream);padding-bottom:calc(var(--r) + 30px)}
+.marquee{overflow:hidden;background:var(--ink);color:var(--yellow);font:600 15px/34px var(--goth);letter-spacing:.14em;white-space:nowrap}
+.marquee p{display:inline-flex;animation:marq 28s linear infinite}
+.marquee span{padding:0 18px}
+.marquee span::after{content:"";display:inline-block;width:7px;height:7px;margin-left:36px;border-radius:50%;background:var(--pink);vertical-align:middle}
+@keyframes marq{to{transform:translateX(-50%)}}
+.stage{position:relative;padding:26px 16px 30px;overflow:hidden;isolation:isolate}
+.planes i{position:absolute;display:block;z-index:-1}
+.planes i:nth-child(1){inset:0;background:var(--yellow);clip-path:polygon(0 0,78% 0,0 64%);animation:planeIn .7s cubic-bezier(.2,1,.3,1) backwards}
+.planes i:nth-child(2){inset:0;background:var(--blue);clip-path:polygon(100% 38%,100% 100%,26% 100%);animation:planeIn .7s cubic-bezier(.2,1,.3,1) .1s backwards}
+.planes i:nth-child(3){right:-50px;top:-50px;width:190px;height:190px;border-radius:50%;background:var(--pink);animation:planeIn .7s cubic-bezier(.2,1,.3,1) .2s backwards}
+.planes i:nth-child(4){left:-30px;bottom:70px;width:90px;height:90px;border-radius:50%;background:var(--pink-l)}
+@keyframes planeIn{from{opacity:0;translate:-30px 0}}
+.fv__logo{display:block;width:150px;height:auto;margin:0 auto;padding:10px 16px;background:#fff;border:3px solid var(--ink);box-sizing:content-box}
+.fv__pre{display:table;margin:12px auto 0;padding:2px 18px;background:var(--ink);color:#fff;font-weight:700;font-size:19px;letter-spacing:.16em}
+.fv__pre b{font:600 26px/1 var(--num);color:var(--yellow);margin:0 .08em}
+.hero{display:flex;justify-content:center;align-items:flex-end;margin-top:20px;padding-right:10px}
+.hero__3{display:block;font:700 330px/.74 var(--num);color:var(--pink-d);-webkit-text-stroke:5px var(--ink);paint-order:stroke fill;animation:three .7s cubic-bezier(.2,1.4,.4,1) .2s backwards}
+@keyframes three{from{opacity:0;transform:scale(.6)}}
+.cakey{display:block;width:170px;height:auto;margin-left:-14px;margin-bottom:-6px;overflow:visible;animation:cakeIn .6s cubic-bezier(.2,1.4,.4,1) .5s backwards,bob 2.8s ease-in-out 1.2s infinite}
+.cakey__flames path{fill:#FF9F1C;stroke:#4A4F54;stroke-width:3;transform-box:fill-box;transform-origin:50% 100%;animation:flame 1s ease-in-out infinite alternate}
+.cakey__flames path:nth-child(2){animation-delay:-.35s}
+.cakey__flames path:nth-child(3){animation-delay:-.7s}
+.cakey__arm{transform-box:fill-box}
+.cakey__arm--l{transform-origin:100% 100%;animation:wave 1.4s ease-in-out infinite}
+.cakey__arm--r{transform-origin:0 100%;animation:wave2 1.4s ease-in-out .7s infinite}
+.cakey__eyes{transform-box:fill-box;transform-origin:50% 50%;animation:blink 4s steps(1) infinite}
+@keyframes cakeIn{from{opacity:0;transform:translateY(30px)}}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes wave{50%{transform:rotate(-18deg)}}
+@keyframes wave2{50%{transform:rotate(18deg)}}
+@keyframes blink{0%,94%{transform:scaleY(1)}95%,98%{transform:scaleY(.1)}}
+@keyframes flame{to{transform:scale(.86,1.08)}}
+.fv__copy{padding:26px 16px 0}
+.fv__title{font-weight:800;line-height:1.2}
+.fv__l1{display:table;margin:0 auto;padding:6px 26px;background:var(--pink-d);color:#fff;font-size:32px;letter-spacing:.12em;border:3px solid var(--ink)}
+.fv__l2{display:block;margin-top:10px;font-size:64px;letter-spacing:.08em}
+.fv__lead{margin-top:16px;font-weight:700;font-size:20px;line-height:1.6}
+.fv__lead b{font:600 32px/1 var(--num);color:var(--pink-d);margin:0 .06em}
+
+/* ========== 共通：角丸で重なるブロック ========== */
+.blk{position:relative;margin-top:calc(var(--r) * -1);padding:56px 20px calc(var(--r) + 56px);border-radius:var(--r) var(--r) 0 0;scroll-margin-top:0}
+.blk:last-child{padding-bottom:60px}
+.h-en{font:600 16px/1 var(--num);letter-spacing:.3em}
+.h-ja{margin-top:10px;font-weight:800;font-size:34px;line-height:1.35;letter-spacing:.1em}
+
+/* ========== 3つのキャンペーン早見表 ========== */
+.idx{background:var(--ink);color:#fff}
+.idx .h-en{color:var(--yellow)}
+.idx .h-ja b{font:700 50px/1 var(--num);color:var(--yellow);margin:0 .06em}
+.tiles{display:grid;gap:14px;margin-top:26px;text-align:left}
+.tile{display:grid;grid-template-columns:118px 1fr 96px;align-items:center;background:#fff;color:var(--ink);text-decoration:none;border-radius:20px;overflow:hidden;transition:transform .15s}
+.tile:hover{transform:translateY(-3px)}
+.tile__no{display:flex;flex-direction:column;justify-content:center;align-items:center;align-self:stretch;background:var(--c);padding:12px 4px;text-align:center}
+.tile__no b{font:700 48px/1 var(--num);color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill}
+.tile__no span{margin-top:6px;font:600 17px/1.2 var(--num);letter-spacing:.02em}
+.tile__body{padding:12px 6px 12px 16px;line-height:1.45}
+.tile__who{font-size:14px;font-weight:700;color:var(--cd)}
+.tile__ttl{margin-top:2px;font-weight:800;font-size:20px;letter-spacing:.06em}
+.tile__get{margin-top:4px;font-size:15px;font-weight:600}
+.tile__get b{font:600 22px/1 var(--num);color:var(--pink-d);margin:0 .06em}
+.tile__img{width:84px;height:84px;margin:0 12px 0 0;border-radius:50%;overflow:hidden;background:#fff;border:3px solid var(--c);display:grid;place-items:center}
+.tile__img img{width:100%;height:100%;object-fit:contain}
+.tile__img--umb{font-size:14px;font-weight:700;color:var(--blue-d);line-height:1.3}
+/* 12月のスケジュール（横棒） */
+.cal{margin-top:30px;padding:18px 16px 16px;background:rgba(255,255,255,.08);border-radius:20px}
+.cal__h{font-weight:700;font-size:17px;letter-spacing:.14em}
+.cal__axis{position:relative;height:24px;margin:10px 0 4px;font:500 15px/24px var(--num);color:var(--yellow)}
+.cal__axis span{position:absolute;transform:translateX(-50%)}
+.cal__bars{position:relative;display:grid;gap:8px;padding:6px 0 2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 1px,transparent 1px calc(100%/31))}
+.cal__row{position:relative;height:32px}
+.cal__row i{position:absolute;top:0;bottom:0;left:var(--s);width:var(--w);background:var(--c);border-radius:999px}
+.cal__row span{position:absolute;top:0;left:calc(var(--s) + 12px);font-weight:700;font-size:14px;line-height:32px;color:var(--ink);white-space:nowrap}
+.cal__row--out span{left:calc(var(--s) + var(--w) + 8px);color:#fff}
+.cal__note{margin-top:10px;font-size:14px;color:#DADDE0}
+
+/* ========== キャンペーン共通 ========== */
+.cp{color:var(--ink)}
+.cp__head{position:relative}
+.cp__no{display:block;font:700 150px/.8 var(--num);color:#fff;-webkit-text-stroke:5px var(--ink);paint-order:stroke fill;letter-spacing:0}
+.cp__no small{display:block;margin-bottom:12px;font:600 16px/1 var(--num);letter-spacing:.3em;color:var(--ink);-webkit-text-stroke:0}
+.cp__state{display:table;margin:18px auto 0;padding:4px 22px;background:var(--ink);color:#fff;border-radius:999px;font-weight:700;font-size:16px;letter-spacing:.1em}
+.cp__state:empty{display:none}
+.cp[data-state="closed"] .cp__state{background:#8A9096}
+.cp__pre{margin-top:16px;font-weight:700;font-size:18px}
+.cp__ttl{margin-top:4px;font-weight:800;font-size:40px;line-height:1.3;letter-spacing:.08em}
+.cp__lead{margin-top:10px;font-weight:700;font-size:18px;line-height:1.6}
+/* もらえるもの：写真を大きく */
+.gift{position:relative;max-width:520px;margin:28px auto 0;background:#fff;border:3px solid var(--ink);border-radius:28px;overflow:hidden}
+.gift__img{position:relative;margin:0;aspect-ratio:4/3;background:#fff}
+.gift__img img{display:block;width:100%;height:100%;object-fit:contain}
+.gift__img.is-empty{display:grid;place-items:center;margin:16px;aspect-ratio:auto;height:280px;border:3px dashed var(--blue);border-radius:18px;background:var(--blue-l);font-weight:700;font-size:16px;color:var(--blue-d)}
+.gift__seal{position:absolute;right:14px;top:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;width:118px;height:118px;border-radius:50%;background:var(--pink-d);color:#fff;border:3px solid var(--ink);font-weight:700;font-size:15px;line-height:1.25;z-index:1}
+.gift__seal b{font:700 44px/1 var(--num);color:var(--yellow)}
+.gift__body{padding:16px 16px 20px;border-top:3px solid var(--ink)}
+.gift__brand{font:600 16px/1.3 var(--num);letter-spacing:.08em;color:#6A7075}
+.gift__name{margin-top:4px;font-weight:800;font-size:24px;line-height:1.4;letter-spacing:.06em}
+/* 期間などの表 */
+.facts{max-width:520px;margin:20px auto 0;background:#fff;border:3px solid var(--ink);border-radius:20px;overflow:hidden;text-align:left}
+.facts div{display:grid;grid-template-columns:92px 1fr;align-items:center}
+.facts div+div{border-top:2px dashed #CFD5D8}
+.facts dt{align-self:stretch;display:grid;place-items:center;padding:10px 4px;background:var(--cl);font-weight:800;font-size:15px;letter-spacing:.1em}
+.facts dd{margin:0;padding:10px 14px;font-weight:700;font-size:17px;line-height:1.5}
+.facts dd b{font:600 28px/1 var(--num);margin:0 .04em}
+.facts dd small{font-size:14px;font-weight:600;color:#6A7075}
+/* 3ステップ */
+.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:520px;margin:20px auto 0}
+.flow li{position:relative;padding:12px 4px 14px;background:#fff;border:3px solid var(--ink);border-radius:18px;font-weight:700;font-size:15px;line-height:1.5}
+.flow li b{display:block;font:600 32px/1.1 var(--num);color:var(--pink-d)}
+.flow li+li::before{content:"";position:absolute;left:-15px;top:50%;margin-top:-7px;border:7px solid transparent;border-left:9px solid var(--ink)}
+.note{margin-top:12px;font-size:15px;line-height:1.7}
+
+/* ========== 01 ディズニー ========== */
+.cp--disney{background:var(--blue);--cl:var(--blue-l)}
+.cp--disney::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;background:radial-gradient(circle,rgba(255,255,255,.22) 0 5px,transparent 6px) 0 0/36px 36px;pointer-events:none}
+.cp--disney>*{position:relative}
+.cp--disney .cp__ttl{color:#fff;-webkit-text-stroke:6px var(--ink);paint-order:stroke fill}
+.eq{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:4px 8px;max-width:520px;margin:20px auto 0;padding:14px 10px;background:var(--yellow);border:3px solid var(--ink);border-radius:20px;font-weight:800;font-size:18px;line-height:1.2}
+.eq b{font:700 52px/1 var(--num)}
+.eq i{font:600 30px/1 var(--num);font-style:normal}
+.eq .eq__total b{font-size:72px;color:var(--pink-d)}
+.tease{max-width:520px;margin:24px auto 0;padding:16px;background:var(--ink);color:#fff;border-radius:20px;font-size:16px;line-height:1.7}
+.tease b{font:600 30px/1 var(--num);color:var(--yellow);margin-right:.3em}
+
+/* ========== 02 新生児 / 03 トライ ========== */
+.cp--newborn{background:var(--yellow);--cl:var(--yellow-p)}
+.cp--try{background:var(--pink-l);--cl:var(--pink-p)}
+.cp--try .gift__seal{background:var(--blue-d)}
+/* 対象商品 */
+.items__h{margin-top:44px;font-weight:800;font-size:26px;letter-spacing:.1em}
+.items__h b{font:700 44px/1 var(--num);color:var(--pink-d);margin:0 .06em}
+.items__note{font-size:14px;color:#4A4F54}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+.pi{display:flex;flex-direction:column;background:#fff;border:3px solid var(--ink);border-radius:22px;overflow:hidden;line-height:1.5;transition:transform .15s}
+.pi:hover{transform:translateY(-3px)}
+.pi__img{position:relative;display:block;aspect-ratio:1;background:#fff;border-bottom:3px solid var(--ink);overflow:hidden}
+.pi__img img{display:block;width:100%;height:100%;object-fit:contain}
+.pi__ph{display:grid;place-items:center;height:100%;background:#F4F5F5;font-size:16px;color:#6A7075}
+.pi__new{position:absolute;left:10px;top:10px;padding:2px 12px;background:var(--pink-d);color:#fff;border-radius:999px;font-style:normal;font-weight:700;font-size:14px;letter-spacing:.1em}
+.pi__age{position:absolute;right:10px;bottom:10px;padding:2px 12px;white-space:nowrap;background:var(--ink);color:#fff;border-radius:999px;font-weight:600;font-size:14px}
+.pi__body{display:flex;flex-direction:column;flex:1;padding:14px 14px 16px}
+.pi__brand{font-size:14px;color:#6A7075;letter-spacing:.06em}
+.pi__name{font-weight:800;font-size:20px;line-height:1.35;word-break:keep-all;overflow-wrap:anywhere}
+.pi__kind{display:table;margin:6px auto 0;padding:0 12px;background:var(--cl);border-radius:999px;font-weight:700;font-size:14px}
+.pi__pts{list-style:none;padding:0;margin:10px 0 0;font-size:15px;line-height:1.6;flex:1}
+.pi__pts li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;border-radius:50%;background:var(--pink);vertical-align:2px}
+.pi__price{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;margin-top:12px;font-weight:800;line-height:1.1}
+.pi__price b{font:600 44px/1 var(--num);letter-spacing:.01em;color:var(--pink-d)}
+.pi__price span{font-size:22px;margin-left:2px}
+.pi__price small{flex-basis:100%;margin-top:4px;font-size:14px;font-weight:600;color:#4A4F54}
+.pi__price--tbd b{font:800 22px/1.3 var(--goth);color:#6A7075}
+.pi__perk{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;padding:6px 8px;background:var(--cl);border-radius:14px;font-weight:700;font-size:14px;line-height:1.35;text-align:left}
+.pi__perk img{width:40px;height:40px;flex:none;border-radius:50%;background:#fff;object-fit:contain;border:2px solid var(--ink)}
+.pi__go{position:relative;display:block;margin-top:12px;padding:12px 30px 12px 12px;background:var(--ink);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:.08em;transition:background .15s}
+.pi__go::after{content:"";position:absolute;right:18px;top:50%;width:9px;height:9px;margin-top:-5px;border-top:3px solid #fff;border-right:3px solid #fff;transform:rotate(45deg)}
+.pi__go:hover,.pi__go:focus-visible{background:var(--pink-d)}
+.pi__go[aria-disabled]{pointer-events:none;background:#B9BFC3}
+
+/* ========== 総選挙の告知帯（メインにしない） ========== */
+.soon{background:#fff;padding-top:48px}
+.soon__in{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:16px;max-width:520px;margin:0 auto;padding:18px 20px;border:3px solid var(--ink);border-radius:24px;background:var(--yellow-p);text-align:left}
+.soon__tag{font:700 15px/1.3 var(--num);letter-spacing:.16em;color:#fff;background:var(--ink);padding:10px 12px;border-radius:14px;text-align:center}
+.soon__ttl{font-weight:800;font-size:22px;letter-spacing:.08em;line-height:1.4}
+.soon__txt{font-size:15px;line-height:1.6}
+
+/* ========== しめ ========== */
+.end{background:#fff;padding-top:48px}
+.end .cakey{width:110px;margin:0 auto;animation:bob 2.8s ease-in-out infinite}
+.end__msg{margin-top:16px;font-weight:800;font-size:22px;line-height:1.6}
+.end__btn{display:block;max-width:400px;margin:22px auto 0;padding:15px;background:var(--ink);color:#fff;border-radius:999px;text-decoration:none;font-weight:800;font-size:18px;letter-spacing:.1em}
+
+/* ========== スマホ ========== */
+@media (max-width:520px){
+  :root{--r:28px}
+  .stage{padding:20px 10px 24px}
+  .fv__logo{width:120px}
+  .fv__pre{font-size:16px}
+  .planes i:nth-child(3){width:130px;height:130px}
+  .hero{margin-top:18px;padding-right:0}
+  .hero__3{font-size:240px;-webkit-text-stroke-width:4px}
+  .hero .cakey{width:124px;margin-left:-10px}
+  .fv__copy{padding:22px 12px 0}
+  .fv__l1{font-size:24px;padding:5px 18px}
+  .fv__l2{font-size:46px}
+  .fv__lead{font-size:17px}
+  .fv__lead b{font-size:28px}
+  .blk{padding:48px 14px calc(var(--r) + 48px)}
+  .h-ja{font-size:25px}
+  .idx .h-ja b{font-size:42px}
+  .tile{grid-template-columns:86px 1fr 70px;border-radius:18px}
+  .tile__no b{font-size:38px}
+  .tile__no span{font-size:15px}
+  .tile__body{padding:10px 4px 10px 12px}
+  .tile__ttl{font-size:18px}
+  .tile__get{font-size:14px}
+  .tile__get b{font-size:19px}
+  .tile__img{width:60px;height:60px;margin-right:10px;border-width:2px}
+  .tile__img--umb{font-size:14px}
+  .cal{padding:16px 10px 14px}
+  .cp__no{font-size:118px;-webkit-text-stroke-width:4px}
+  .cp__pre,.cp__lead{font-size:16px}
+  .cp__ttl{font-size:31px}
+  .gift__seal{width:96px;height:96px;font-size:14px;right:10px;top:10px}
+  .gift__seal b{font-size:36px}
+  .gift__img.is-empty{height:220px}
+  .gift__name{font-size:20px}
+  .facts div{grid-template-columns:72px 1fr}
+  .facts dd{padding:10px;font-size:16px}
+  .facts dd b{font-size:24px}
+  .eq{font-size:14px;gap:2px 4px;flex-wrap:nowrap;padding:12px 6px}
+  .eq b{font-size:34px}
+  .eq i{font-size:20px}
+  .eq .eq__total b{font-size:46px}
+  .flow{gap:14px}
+  .flow li{font-size:14px;padding:10px 2px 12px}
+  .items__h{font-size:22px}
+  .items{grid-template-columns:1fr;gap:18px;max-width:360px;margin-left:auto;margin-right:auto}
+  .pi__img{aspect-ratio:4/3}
+  .pi__name{font-size:21px}
+  .pi__price b{font-size:44px}
+  .soon__in{grid-template-columns:1fr;text-align:center;gap:10px}
+  .soon__tag{justify-self:center}
+  .soon__ttl{font-size:20px}
+  .end__msg{font-size:19px}
+}
+@media (max-width:370px){
+  .hero__3{font-size:220px}
+  .fv__l2{font-size:42px}
+  .tile{grid-template-columns:78px 1fr 62px}
+  .tile__img{width:54px;height:54px}
+}
+
+/* ========== PC：両脇レール ========== */
+.side{display:none}
+@media (min-width:1180px){
+  .side{display:block;position:fixed;top:0;bottom:0;width:calc((100vw - var(--col))/2);z-index:5}
+  .side-l{left:0}
+  .side-r{right:0}
+  .side-in{position:absolute;top:50%;transform:translateY(-50%);width:280px;padding:0 10px}
+  .side-l .side-in{right:36px}
+  .side-r .side-in{left:36px}
+  .side__logo{width:150px;height:auto}
+  .side__three{display:flex;justify-content:center;align-items:flex-end;margin-top:10px;font-weight:700;font-size:18px}
+  .side__three b{font:700 76px/.8 var(--num);color:var(--pink-d);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;margin-right:6px}
+  .side__nav{display:grid;gap:10px;margin-top:20px}
+  .side__nav a{display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:3px solid var(--ink);border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;line-height:1.35;text-align:left;transition:transform .15s}
+  .side__nav a:hover{transform:translateX(4px)}
+  .side__nav b{font:700 24px/1 var(--num);color:var(--c)}
+  .side__cal{padding:20px 16px;background:var(--ink);color:#fff;border-radius:24px;text-align:left}
+  .side__cal h2{text-align:center;font-size:17px;letter-spacing:.14em}
+  .side__cal ol{list-style:none;padding:0;margin-top:12px;display:grid;gap:10px}
+  .side__cal li{display:grid;grid-template-columns:60px 1fr;align-items:center;gap:8px;font-weight:600;font-size:15px;line-height:1.4}
+  .side__cal li b{font:600 22px/1 var(--num);color:var(--yellow)}
+  .side__cal li span{padding:4px 10px;background:var(--c);color:var(--ink);border-radius:12px;font-weight:700}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

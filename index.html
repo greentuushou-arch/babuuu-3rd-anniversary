@@ -6,9 +6,7 @@
 <meta name="robots" content="noindex">
 <title>babuuu. 3周年記念 3さいの誕生日を迎えました！</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Noto+Sans+JP:wght@400..800&display=swap">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="fv-c.css">
-<link rel="stylesheet" href="campaigns.css">
+<link rel="stylesheet" href="anniv.css">
 </head>
 <body>
 
@@ -17,36 +15,40 @@
   <div class="side-in">
     <a href="https://www.rakuten.co.jp/babuuu/" target="_blank" rel="noopener"><img class="side__logo" src="images/logo.png" alt="babuuu." width="893" height="220"></a>
     <p class="side__three"><b>3</b><span>周年記念</span></p>
-    <p class="side__ttl">3さいの誕生日を<br>迎えました！</p>
-    <nav class="guide" id="sideNav"></nav>
+    <nav class="side__nav">
+      <a href="#c1" style="--c:var(--blue-d)"><b>01</b><span>ディズニー傘</span></a>
+      <a href="#c2" style="--c:#E0A800"><b>02</b><span>新生児 応援</span></a>
+      <a href="#c3" style="--c:var(--pink-d)"><b>03</b><span>初めてのトライ</span></a>
+    </nav>
   </div>
 </aside>
 
-<!-- PC：右レール（総選挙への近道） -->
-<aside class="side side-r" aria-label="推しアイテム総選挙">
+<!-- PC：右レール（12月の予定） -->
+<aside class="side side-r" aria-label="12月の予定">
   <div class="side-in">
-    <a class="side-senkyo js-senkyo" href="#">
-      <span class="side-senkyo__no">キャンペーン <b>01</b></span>
-      <span class="side-senkyo__ttl">推しアイテム<br><em>総選挙</em></span>
-      <span class="side-senkyo__date js-senkyo-term"></span>
-      <span class="side-senkyo__go">会場へ</span>
-    </a>
-    <p class="side-r__note">ほかのキャンペーンも<br>順次公開します</p>
+    <div class="side__cal">
+      <h2>12月の予定</h2>
+      <ol>
+        <li><b>12/1</b><span style="--c:var(--blue)">ディズニー傘 開始</span></li>
+        <li><b>12/3</b><span style="--c:var(--yellow)">新生児 応援 開始</span></li>
+        <li><b>12/3</b><span style="--c:var(--pink-l)">トライ 開始</span></li>
+        <li><b>12/31</b><span style="--c:#fff">02・03 終了</span></li>
+      </ol>
+    </div>
   </div>
 </aside>
 
 <div class="page">
-  <p class="demo" id="demo" hidden>見本データで表示しています</p>
 
-  <!-- ===== FV 案C: 色面×巨大な3×ケーキのキャラクター（参考: Daytona Park 17th/18th・PLAZA 60th） ===== -->
-  <header class="fv fvc">
-    <div class="fvc__marquee" aria-hidden="true"><p><span>babuuu. 3さいの誕生日</span><span>いつもありがとう</span><span>babuuu. 3さいの誕生日</span><span>いつもありがとう</span><span>babuuu. 3さいの誕生日</span><span>いつもありがとう</span></p></div>
-    <div class="fvc__stage">
-      <div class="fvc__planes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-      <img class="fvc__logo" src="images/logo.png" alt="babuuu." width="893" height="220">
-      <p class="fvc__pre">オープン<b>3</b>周年記念</p>
-      <div class="fvc__hero" aria-hidden="true">
-        <span class="fvc__3">3</span>
+  <!-- ===== FV ===== -->
+  <header class="fv">
+    <div class="marquee" aria-hidden="true"><p><span>babuuu. 3さいの誕生日</span><span>いつもありがとう</span><span>babuuu. 3さいの誕生日</span><span>いつもありがとう</span><span>babuuu. 3さいの誕生日</span><span>いつもありがとう</span></p></div>
+    <div class="stage">
+      <div class="planes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <img class="fv__logo" src="images/logo.png" alt="babuuu." width="893" height="220">
+      <p class="fv__pre">オープン<b>3</b>周年記念</p>
+      <div class="hero" aria-hidden="true">
+        <span class="hero__3">3</span>
         <svg class="cakey" viewBox="0 0 170 230" role="presentation">
           <g class="cakey__flames">
             <path d="M52 30c-7 8-7 16 0 18 7-2 7-10 0-18z"/><path d="M85 18c-8 9-8 18 0 20 8-2 8-11 0-20z"/><path d="M118 30c-7 8-7 16 0 18 7-2 7-10 0-18z"/>
@@ -66,190 +68,161 @@
         </svg>
       </div>
     </div>
-    <div class="fvc__copy">
-      <h1 class="fvc__title"><span class="fvc__l1">3さいの誕生日を</span><span class="fvc__l2">迎えました！</span></h1>
-      <p class="fvc__lead">ありがとうの気持ちをこめて<br><b>12</b>月はお祝いキャンペーンを<br class="sp">つぎつぎ開催します</p>
-      <nav class="fv__nav" id="fvNav" aria-label="キャンペーン一覧"></nav>
+    <div class="fv__copy">
+      <h1 class="fv__title"><span class="fv__l1">3さいの誕生日を</span><span class="fv__l2">迎えました！</span></h1>
+      <p class="fv__lead"><span class="nw">ありがとうをこめて</span><span class="nw">12月は<b>3</b>つのお祝い企画</span></p>
     </div>
   </header>
 
-  <!-- ===== ごあいさつ ===== -->
-  <section class="thanks">
-    <figure class="thanks__photo"><img src="images/kid.jpg" alt="babuuu.の写真 スツールに座って上を見上げる男の子" width="920" height="700" loading="lazy"></figure>
-    <h2>みなさまのおかげで<br>3さいになりました</h2>
-    <p><span class="nw">babuuu.は</span>2023年12月のオープンから、この12月で3周年を迎えました。<br class="pc">いつもご利用いただき、本当にありがとうございます。<br class="pc">日ごろの感謝をこめて、うれしいお祝い企画をご用意しました。</p>
-  </section>
-
   <main>
-    <!-- ===== キャンペーン01 推しアイテム総選挙 ===== -->
-    <section class="senkyo" id="c1">
-      <div class="flags flags--w" aria-hidden="true"></div>
-      <p class="cno"><span>キャンペーン</span><b>01</b></p>
-      <p class="senkyo__state" id="senkyoState"></p>
-      <h2 class="senkyo__ttl"><span>推しアイテム</span><em>総選挙</em></h2>
-      <p class="senkyo__lead">babuuu.の人気12商品から<br>あなたの推しに<b>1</b>票を！</p>
-
-      <div class="senkyo__board" aria-hidden="true" id="board"></div>
-
-      <div class="senkyo__facts">
-        <div class="fact">
-          <p class="fact__h">投票期間</p>
-          <p class="fact__d js-senkyo-term"></p>
-        </div>
-        <div class="fact fact--lot">
-          <p class="fact__h">期間中のお買い物で自動エントリー</p>
-          <p class="fact__d"><span class="nw">12商品が各<b>1</b>名様</span> <span class="nw">合計<b id="winners">12</b>名様に当たる</span></p>
+    <!-- ===== 3つのキャンペーン早見表 ===== -->
+    <section class="blk idx" id="index">
+      <p class="h-en">CAMPAIGN</p>
+      <h2 class="h-ja"><span class="nw"><b>3</b>つの</span><span class="nw">お祝いキャンペーン</span></h2>
+      <nav class="tiles" aria-label="キャンペーン一覧">
+        <a class="tile" href="#c1" style="--c:var(--blue);--cd:var(--blue-d)">
+          <span class="tile__no"><b>01</b><span>12/1-3</span></span>
+          <span class="tile__body"><span class="tile__who">3日間限定</span><span class="tile__ttl" style="display:block">ディズニー傘</span><span class="tile__get" style="display:block">抽選で<b>99</b>名様</span></span>
+          <span class="tile__img tile__img--umb"><svg width="70%" viewBox="0 0 220 200"><g stroke="#4A4F54" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M110 22v150q0 18-16 18t-16-14" fill="none"/><path d="M14 104Q20 30 110 22q90 8 96 82q-16-14-32 0q-16-14-32 0q-16-14-32 0q-16-14-32 0q-16-14-32 0q-16-14-32 0z" fill="#FFFFFF"/><path d="M110 22Q70 40 66 104q-16-14-32 0Q30 50 110 22zM110 22q40 18 44 82q16-14 32 0q4-54-76-82z" fill="#FF6B97"/><path d="M110 22q-14 30-12 82q6-6 12-6t12 6q2-52-12-82z" fill="#FFCB2E"/></g><circle cx="110" cy="16" r="7" fill="#4A4F54"/></svg></span>
+        </a>
+        <a class="tile" href="#c2" style="--c:var(--yellow);--cd:#B88600">
+          <span class="tile__no"><b>02</b><span>12/3-31</span></span>
+          <span class="tile__body"><span class="tile__who">新生児から使える商品で</span><span class="tile__ttl" style="display:block">新生児 応援</span><span class="tile__get" style="display:block">先着<b>300</b>名様にビブ</span></span>
+          <span class="tile__img"><img src="images/g-bib.jpg" alt="" width="84" height="84"></span>
+        </a>
+        <a class="tile" href="#c3" style="--c:var(--pink-l);--cd:var(--pink-d)">
+          <span class="tile__no"><b>03</b><span>12/3-31</span></span>
+          <span class="tile__body"><span class="tile__who">対象商品のレビューで</span><span class="tile__ttl" style="display:block">初めてのトライ</span><span class="tile__get" style="display:block">マグセット<b>100</b>個</span></span>
+          <span class="tile__img"><img src="images/g-mug.jpg" alt="" width="84" height="84"></span>
+        </a>
+      </nav>
+      <div class="cal">
+        <p class="cal__h">12月のスケジュール</p>
+        <div class="cal__axis" aria-hidden="true"><span style="left:1.61%">1</span><span style="left:8.06%">3</span><span style="left:30.65%">10</span><span style="left:62.90%">20</span><span style="left:98.39%">31</span></div>
+        <div class="cal__bars">
+          <div class="cal__row cal__row--out" style="--c:var(--blue);--s:0.00%;--w:9.68%"><i></i><span>01 ディズニー傘 12/1〜3</span></div>
+          <div class="cal__row" style="--c:var(--yellow);--s:6.45%;--w:93.55%"><i></i><span>02 新生児 応援 12/3〜31</span></div>
+          <div class="cal__row" style="--c:var(--pink-l);--s:6.45%;--w:93.55%"><i></i><span>03 初めてのトライ 応援 12/3〜31</span></div>
         </div>
       </div>
-      <p class="senkyo__sched" id="senkyoSched"></p>
-
-      <a class="senkyo__go js-senkyo" href="#"><span>総選挙の会場へ</span></a>
-      <p class="senkyo__note" id="senkyoNote"></p>
     </section>
 
-    <!-- ===== キャンペーン02 ディズニーグッズ プレゼント ===== -->
-    <section class="cp cp--disney" id="c2" data-start="2026-12-01T00:00:00+09:00" data-end="2026-12-03T23:59:59+09:00">
-      <p class="cno"><span>キャンペーン</span><b>02</b></p>
-      <p class="cp__state js-state"></p>
-      <p class="cp__pre">3周年を記念して<br>ちょっと早いクリスマスプレゼント</p>
-      <h2 class="cp__ttl">ディズニーグッズ<br>プレゼント<br class="sp">キャンペーン</h2>
-      <div class="umb" aria-hidden="true">
-        <svg viewBox="0 0 220 200"><g stroke="#4A4F54" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M110 22v150q0 18-16 18t-16-14" fill="none"/><path d="M14 104Q20 30 110 22q90 8 96 82q-16-14-32 0q-16-14-32 0q-16-14-32 0q-16-14-32 0q-16-14-32 0q-16-14-32 0z" fill="#FFFFFF"/><path d="M110 22Q70 40 66 104q-16-14-32 0Q30 50 110 22zM110 22q40 18 44 82q16-14 32 0q4-54-76-82z" fill="#FF6B97"/><path d="M110 22q-14 30-12 82q6-6 12-6t12 6q2-52-12-82z" fill="#FFCB2E"/></g><circle cx="110" cy="16" r="7" fill="#4A4F54"/></svg>
-        <p class="umb__label">折りたたみ傘</p>
+    <!-- ===== 01 ディズニーグッズ プレゼント ===== -->
+    <section class="blk cp cp--disney" id="c1" data-start="2026-12-01T00:00:00+09:00" data-end="2026-12-03T23:59:59+09:00">
+      <div class="cp__head"><span class="cp__no"><small>CAMPAIGN</small>01</span></div>
+      <p class="cp__state"></p>
+      <p class="cp__pre">ちょっと早いクリスマスプレゼント</p>
+      <h2 class="cp__ttl"><span class="nw">ディズニーグッズ</span> <span class="nw">プレゼント</span></h2>
+      <div class="gift">
+        <!-- 傘の写真は images/g-umbrella.jpg に置くと自動で表示される -->
+        <figure class="gift__img"><img src="images/g-umbrella.jpg" alt="ディズニー 折りたたみ傘" width="800" height="600" onerror="this.parentNode.classList.add('is-empty');this.parentNode.textContent='折りたたみ傘の写真が入ります'"></figure>
+        <p class="gift__seal"><span>抽選で</span><b>99</b><span>名様</span></p>
+        <div class="gift__body"><p class="gift__brand">Disney</p><p class="gift__name">ディズニー 折りたたみ傘</p></div>
       </div>
-      <p class="cp__gift"><span class="nw">ディズニーの</span><b>折りたたみ傘</b><span class="nw">をプレゼント！</span></p>
-      <div class="cp__term"><span class="cp__term-h">3日間限定</span><b>12/1</b>(火)<i>〜</i><b>12/3</b>(木)</div>
-      <div class="num99">
-        <p class="num99__row"><span>毎日</span><b>33</b><span>名様</span><i>×</i><b>3</b><span>日間</span></p>
-        <p class="num99__total"><span>抽選で合計</span><b>99</b><span>名様に当たる</span></p>
-      </div>
-      <dl class="cp__info">
-        <div><dt>応募方法</dt><dd>【仮】決まりしだいお知らせします</dd></div>
-        <div><dt>発送</dt><dd>当選された方へ 12/4(金)に発送予定</dd></div>
+      <p class="eq"><span><b>33</b>名様</span><i>×</i><span><b>3</b>日間</span><i>=</i><span class="eq__total"><b>99</b>名様</span></p>
+      <dl class="facts">
+        <div><dt>期間</dt><dd><b>12/1</b>(火)〜<b>12/3</b>(木) <small class="nw">3日間限定</small></dd></div>
+        <div><dt>当選</dt><dd>毎日33名様を抽選</dd></div>
+        <div><dt>応募</dt><dd>【仮】決まりしだいお知らせします</dd></div>
+        <div><dt>発送</dt><dd>当選の方へ 12/4(金)発送予定</dd></div>
       </dl>
-      <div class="tease">
-        <p class="tease__date"><b>12/24</b><span>・</span><b>12/25</b></p>
-        <p class="tease__txt">クリスマスにも なにか起こるかも…？<br>このページをときどき<br>のぞいてみてください</p>
-      </div>
+      <p class="tease"><b>12/24・25</b><span class="nw">クリスマスにも、</span><span class="nw">なにか起こるかも…？</span></p>
     </section>
 
-    <!-- ===== キャンペーン03 新生児 応援キャンペーン ===== -->
-    <section class="cp cp--newborn" id="c3" data-start="2026-12-03T00:00:00+09:00" data-end="2026-12-31T23:59:59+09:00">
-      <p class="cno"><span>キャンペーン</span><b>03</b></p>
-      <p class="cp__state js-state"></p>
-      <h2 class="cp__ttl">新生児<br>応援キャンペーン</h2>
-      <p class="cp__lead"><span class="nw">新生児から使える</span><span class="nw">対象商品をお買い上げの方に</span></p>
-      <div class="present">
-        <figure class="present__img"><img src="images/g-bib.jpg" alt="aden + anais スナップビブ ジラフサファリ 3枚セット" width="600" height="600" loading="lazy"></figure>
-        <div class="present__body">
-          <p class="present__brand">aden + anais</p>
-          <p class="present__name">スナップビブ<br>ジラフサファリ 3枚セット</p>
-          <p class="present__cnt"><span>先着</span><b>300</b><span>名様に<br>プレゼント</span></p>
-        </div>
+    <!-- ===== 02 新生児 応援キャンペーン ===== -->
+    <section class="blk cp cp--newborn" id="c2" data-start="2026-12-03T00:00:00+09:00" data-end="2026-12-31T23:59:59+09:00">
+      <div class="cp__head"><span class="cp__no"><small>CAMPAIGN</small>02</span></div>
+      <p class="cp__state"></p>
+      <h2 class="cp__ttl"><span class="nw">新生児</span> <span class="nw">応援キャンペーン</span></h2>
+      <p class="cp__lead"><span class="nw">新生児から使える対象商品を</span><span class="nw">お買い上げの方にプレゼント</span></p>
+      <div class="gift">
+        <figure class="gift__img"><img src="images/g-bib.jpg" alt="aden + anais スナップビブ ジラフサファリ 3枚セット" width="600" height="600" loading="lazy"></figure>
+        <p class="gift__seal"><span>先着</span><b>300</b><span>名様</span></p>
+        <div class="gift__body"><p class="gift__brand">aden + anais</p><p class="gift__name"><span class="nw">スナップビブ</span> <span class="nw">ジラフサファリ 3枚セット</span></p></div>
       </div>
-      <div class="cp__term"><b>12/3</b>(木)<i>〜</i><b>12/31</b>(木) 23:59</div>
-      <h3 class="cp__h3">対象商品 <b>8</b>点</h3>
-      <p class="cp__note">価格は11/27時点のものです</p>
+      <dl class="facts">
+        <div><dt>期間</dt><dd><b>12/3</b>(木)〜<b>12/31</b>(木) <span class="nw">23:59まで</span></dd></div>
+        <div><dt>対象</dt><dd>下の8商品のどれかを購入</dd></div>
+      </dl>
+      <h3 class="items__h">対象商品 <b>8</b>点</h3>
+      <p class="items__note">価格は11/27時点のものです</p>
       <div class="items">
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00021/" target="_blank" rel="noopener"><img src="images/n-luce.jpg" alt="アップリカ ルーチェ フリー AD" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">生後1カ月〜36カ月</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ルーチェ フリー AD</h4><p class="pi__kind">A型ベビーカー</p><ul class="pi__pts"><li>軽量6.3kg</li><li>両対面・4輪フリー</li><li>マグネット式</li></ul><p class="pi__price"><b>78,100</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00021/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00013/" target="_blank" rel="noopener"><img src="images/n-coconeru.jpg" alt="アップリカ ココネル エアー AC" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">新生児〜24カ月</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ココネル エアー AC</h4><p class="pi__kind">ベビーベッド</p><ul class="pi__pts"><li>持ち運べるベビーベッド</li><li>ベビーサークルとしても使える</li></ul><p class="pi__price"><b>29,700</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00013/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00012/" target="_blank" rel="noopener"><img src="images/n-coconeru-plus.jpg" alt="アップリカ ココネル エアープラス AC" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">新生児〜24カ月</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ココネル エアープラス AC</h4><p class="pi__kind">ベビーベッド</p><ul class="pi__pts"><li>持ち運べるベビーベッド</li><li>マットが洗える</li></ul><p class="pi__price"><b>36,300</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00012/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00325/" target="_blank" rel="noopener"><img src="images/n-lacuna.jpg" alt="アップリカ ラクーナ クッション フリー AE" width="600" height="600" loading="lazy"><span class="pi__age">生後1カ月〜36カ月</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ラクーナ クッション フリー AE</h4><p class="pi__kind">A型ベビーカー</p><ul class="pi__pts"><li>4輪フリー</li><li>製品安全協会 A形SG合格品</li></ul><p class="pi__price"><b>71,500</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00325/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00007/?variantId=bgoods-00007-ver2-4" target="_blank" rel="noopener"><img src="images/n-laclis.jpg" alt="アップリカ ラクリス AB" width="600" height="600" loading="lazy"><span class="pi__age">新生児〜3歳</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ラクリス AB</h4><p class="pi__kind">抱っこ紐</p><ul class="pi__pts"><li>腰痛対策のしっかり設計</li><li>フルメッシュ・洗濯機で洗える</li><li>装着かんたん</li></ul><p class="pi__price"><b>32,780</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00007/?variantId=bgoods-00007-ver2-4" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00316/" target="_blank" rel="noopener"><img src="images/n-omni.jpg" alt="エルゴベビー オムニ デラックス メッシュ" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">新生児〜4歳頃</span></a>
-            <div class="pi__body"><p class="pi__brand">エルゴベビー</p><h4 class="pi__name">オムニ デラックス メッシュ</h4><p class="pi__kind">抱っこひも</p><ul class="pi__pts"><li>メッシュ素材</li><li>対面・おんぶ・前向き</li><li>ポケット付き</li></ul><p class="pi__price"><b>36,850</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00316/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <span class="pi__img"><span class="pi__ph">写真準備中</span></span>
-            <div class="pi__body"><h4 class="pi__name">ピボット</h4><ul class="pi__pts"></ul><p class="pi__price pi__price--tbd"><b>価格は近日公開</b></p><a class="pi__go" aria-disabled="true">近日公開</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00393/" target="_blank" rel="noopener"><img src="images/n-smabagi.jpg" alt="ジョイー スマバギ 4WD ドリフト フレックス" width="600" height="600" loading="lazy"><span class="pi__age">生後1カ月〜3歳頃</span></a>
-            <div class="pi__body"><p class="pi__brand">ジョイー</p><h4 class="pi__name">スマバギ 4WD ドリフト フレックス</h4><p class="pi__kind">ベビーカー</p><ul class="pi__pts"><li>両対面タイプ</li></ul><p class="pi__price"><b>44,000</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00393/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00021/" target="_blank" rel="noopener"><img src="images/n-luce.jpg" alt="アップリカ ルーチェ フリー AD" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">生後1カ月〜36カ月</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ルーチェ フリー AD</h4><p class="pi__kind">A型ベビーカー</p><ul class="pi__pts"><li>軽量6.3kg</li><li>両対面・4輪フリー</li><li>マグネット式</li></ul><p class="pi__price"><b>78,100</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00021/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00013/" target="_blank" rel="noopener"><img src="images/n-coconeru.jpg" alt="アップリカ ココネル エアー AC" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">新生児〜24カ月</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ココネル エアー AC</h4><p class="pi__kind">ベビーベッド</p><ul class="pi__pts"><li>持ち運べるベビーベッド</li><li>ベビーサークルとしても使える</li></ul><p class="pi__price"><b>29,700</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00013/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00012/" target="_blank" rel="noopener"><img src="images/n-coconeru-plus.jpg" alt="アップリカ ココネル エアープラス AC" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">新生児〜24カ月</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ココネル エアープラス AC</h4><p class="pi__kind">ベビーベッド</p><ul class="pi__pts"><li>持ち運べるベビーベッド</li><li>マットが洗える</li></ul><p class="pi__price"><b>36,300</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00012/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00325/" target="_blank" rel="noopener"><img src="images/n-lacuna.jpg" alt="アップリカ ラクーナ クッション フリー AE" width="600" height="600" loading="lazy"><span class="pi__age">生後1カ月〜36カ月</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ラクーナ クッション フリー AE</h4><p class="pi__kind">A型ベビーカー</p><ul class="pi__pts"><li>4輪フリー</li><li>製品安全協会 A形SG合格品</li></ul><p class="pi__price"><b>71,500</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00325/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00007/?variantId=bgoods-00007-ver2-4" target="_blank" rel="noopener"><img src="images/n-laclis.jpg" alt="アップリカ ラクリス AB" width="600" height="600" loading="lazy"><span class="pi__age">新生児〜3歳</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ラクリス AB</h4><p class="pi__kind">抱っこ紐</p><ul class="pi__pts"><li>腰痛対策のしっかり設計</li><li>フルメッシュ・洗濯機で洗える</li><li>装着かんたん</li></ul><p class="pi__price"><b>32,780</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00007/?variantId=bgoods-00007-ver2-4" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00316/" target="_blank" rel="noopener"><img src="images/n-omni.jpg" alt="エルゴベビー オムニ デラックス メッシュ" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">新生児〜4歳頃</span></a><div class="pi__body"><p class="pi__brand">エルゴベビー</p><h4 class="pi__name">オムニ デラックス メッシュ</h4><p class="pi__kind">抱っこひも</p><ul class="pi__pts"><li>メッシュ素材</li><li>対面・おんぶ・前向き</li><li>ポケット付き</li></ul><p class="pi__price"><b>36,850</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00316/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><span class="pi__img"><span class="pi__ph">写真準備中</span></span><div class="pi__body"><h4 class="pi__name">ピボット</h4><ul class="pi__pts"></ul><p class="pi__price pi__price--tbd"><b>価格は近日公開</b></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" aria-disabled="true">近日公開</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00393/" target="_blank" rel="noopener"><img src="images/n-smabagi.jpg" alt="ジョイー スマバギ 4WD ドリフト フレックス" width="600" height="600" loading="lazy"><span class="pi__age">生後1カ月〜3歳頃</span></a><div class="pi__body"><p class="pi__brand">ジョイー</p><h4 class="pi__name">スマバギ 4WD ドリフト フレックス</h4><p class="pi__kind">ベビーカー</p><ul class="pi__pts"><li>両対面タイプ</li></ul><p class="pi__price"><b>44,000</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-bib.jpg" alt="" width="40" height="40" loading="lazy"><span>先着300名様に<br>スナップビブつき</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00393/" target="_blank" rel="noopener">商品ページを見る</a></article>
       </div>
     </section>
 
-    <!-- ===== キャンペーン04 初めてのトライ 応援キャンペーン ===== -->
-    <section class="cp cp--try" id="c4" data-start="2026-12-03T00:00:00+09:00" data-end="2026-12-31T23:59:59+09:00">
-      <p class="cno"><span>キャンペーン</span><b>04</b></p>
-      <p class="cp__state js-state"></p>
-      <h2 class="cp__ttl">初めてのトライ<br>応援キャンペーン</h2>
-      <p class="cp__lead"><span class="nw">対象商品のレビューを</span><span class="nw">書いてくださった方に</span></p>
-      <div class="present">
-        <figure class="present__img"><img src="images/g-mug.jpg" alt="リッチェル トライ マグセット" width="600" height="600" loading="lazy"></figure>
-        <div class="present__body">
-          <p class="present__brand">リッチェル</p>
-          <p class="present__name">トライ マグセット</p>
-          <p class="present__cnt"><span>限定</span><b>100</b><span>個<br>プレゼント</span></p>
-        </div>
+    <!-- ===== 03 初めてのトライ 応援キャンペーン ===== -->
+    <section class="blk cp cp--try" id="c3" data-start="2026-12-03T00:00:00+09:00" data-end="2026-12-31T23:59:59+09:00">
+      <div class="cp__head"><span class="cp__no"><small>CAMPAIGN</small>03</span></div>
+      <p class="cp__state"></p>
+      <h2 class="cp__ttl"><span class="nw">初めてのトライ</span> <span class="nw">応援キャンペーン</span></h2>
+      <p class="cp__lead"><span class="nw">対象商品のレビューを</span><span class="nw">書いてくださった方にプレゼント</span></p>
+      <div class="gift">
+        <figure class="gift__img"><img src="images/g-mug.jpg" alt="リッチェル トライ マグセット" width="600" height="600" loading="lazy"></figure>
+        <p class="gift__seal"><span>限定</span><b>100</b><span>個</span></p>
+        <div class="gift__body"><p class="gift__brand">Richell</p><p class="gift__name">リッチェル トライ マグセット</p></div>
       </div>
-      <div class="cp__term"><b>12/3</b>(木)<i>〜</i><b>12/31</b>(木) 23:59</div>
       <ol class="flow">
-        <li><b>1</b>対象商品を<br>お買い上げ</li>
-        <li><b>2</b>商品レビューを<br>書く</li>
-        <li><b>3</b>マグセットを<br>プレゼント</li>
+        <li><b>1</b>対象商品を買う</li>
+        <li><b>2</b>レビューを書く</li>
+        <li><b>3</b>マグが届く</li>
       </ol>
-      <p class="cp__note">【仮】レビュー後のお申し込み方法・お届け時期は決まりしだいお知らせします</p>
-      <h3 class="cp__h3">対象商品 <b>6</b>点</h3>
-      <p class="cp__note">価格は11/27時点のものです</p>
+      <dl class="facts">
+        <div><dt>期間</dt><dd><b>12/3</b>(木)〜<b>12/31</b>(木) <span class="nw">23:59まで</span></dd></div>
+        <div><dt>申込</dt><dd>【仮】決まりしだいお知らせします</dd></div>
+      </dl>
+      <h3 class="items__h">対象商品 <b>6</b>点</h3>
+      <p class="items__note">価格は11/27時点のものです</p>
       <div class="items">
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00312/" target="_blank" rel="noopener"><img src="images/t-vitt.jpg" alt="アップリカ ヴィット AB" width="600" height="600" loading="lazy"><span class="pi__age">生後6カ月〜48カ月</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ヴィット AB</h4><p class="pi__kind">B型ベビーカー</p><ul class="pi__pts"><li>コンパクトに折りたためる</li><li>1年保証</li></ul><p class="pi__price"><b>32,890</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00312/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00010/" target="_blank" rel="noopener"><img src="images/t-ridecrew.jpg" alt="アップリカ ライドクルー ISOFIX AC" width="600" height="600" loading="lazy"><span class="pi__age">3.5歳〜12歳頃</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ライドクルー ISOFIX AC</h4><p class="pi__kind">ジュニアシート</p><ul class="pi__pts"><li>R129適合</li><li>ISOFIX対応・軽量</li></ul><p class="pi__price"><b>27,500</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00010/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00098/" target="_blank" rel="noopener"><img src="images/t-reride.jpg" alt="アップリカ リライド AC" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">15カ月〜</span></a>
-            <div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">リライド AC</h4><p class="pi__kind">チャイルド＆ジュニアシート</p><ul class="pi__pts"><li>R129適合・ISOFIX</li><li>カップホルダー付き</li></ul><p class="pi__price"><b>29,700</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00098/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00353/" target="_blank" rel="noopener"><img src="images/t-auton.jpg" alt="コンビ オートN セカンド QC" width="600" height="600" loading="lazy"><span class="pi__age">生後6カ月〜48カ月</span></a>
-            <div class="pi__body"><p class="pi__brand">コンビ</p><h4 class="pi__name">オートN セカンド QC</h4><p class="pi__kind">B型ベビーカー</p><ul class="pi__pts"><li>リクライニング</li><li>フロントガード標準装備</li></ul><p class="pi__price"><b>29,900</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00353/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00320/" target="_blank" rel="noopener"><img src="images/t-pactpro.jpg" alt="ジョイー パクト プロ" width="600" height="600" loading="lazy"><span class="pi__age">新生児〜4歳頃</span></a>
-            <div class="pi__body"><p class="pi__brand">ジョイー</p><h4 class="pi__name">パクト プロ</h4><p class="pi__kind">A型ベビーカー</p><ul class="pi__pts"><li>専用レインカバー・収納バッグ付き</li><li>幅47cmのコンパクト設計</li></ul><p class="pi__price"><b>24,800</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00320/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
-          <article class="pi">
-            <a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00279/" target="_blank" rel="noopener"><img src="images/t-iavana.jpg" alt="ジョイー アイ・アバーナ" width="600" height="600" loading="lazy"><span class="pi__age">15カ月〜12歳頃</span></a>
-            <div class="pi__body"><p class="pi__brand">ジョイー</p><h4 class="pi__name">アイ・アバーナ</h4><p class="pi__kind">チャイルドシート</p><ul class="pi__pts"><li>R129適合</li><li>ISOFIX対応</li></ul><p class="pi__price"><b>26,280</b><span>円</span><small>税込・送料無料</small></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00279/" target="_blank" rel="noopener">商品ページを見る</a></div>
-          </article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00312/" target="_blank" rel="noopener"><img src="images/t-vitt.jpg" alt="アップリカ ヴィット AB" width="600" height="600" loading="lazy"><span class="pi__age">生後6カ月〜48カ月</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ヴィット AB</h4><p class="pi__kind">B型ベビーカー</p><ul class="pi__pts"><li>コンパクトに折りたためる</li><li>1年保証</li></ul><p class="pi__price"><b>32,890</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-mug.jpg" alt="" width="40" height="40" loading="lazy"><span>レビューで<br>マグセットがもらえる</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00312/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00010/" target="_blank" rel="noopener"><img src="images/t-ridecrew.jpg" alt="アップリカ ライドクルー ISOFIX AC" width="600" height="600" loading="lazy"><span class="pi__age">3.5歳〜12歳頃</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">ライドクルー ISOFIX AC</h4><p class="pi__kind">ジュニアシート</p><ul class="pi__pts"><li>R129適合</li><li>ISOFIX対応・軽量</li></ul><p class="pi__price"><b>27,500</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-mug.jpg" alt="" width="40" height="40" loading="lazy"><span>レビューで<br>マグセットがもらえる</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00010/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00098/" target="_blank" rel="noopener"><img src="images/t-reride.jpg" alt="アップリカ リライド AC" width="600" height="600" loading="lazy"><em class="pi__new">新発売</em><span class="pi__age">15カ月〜</span></a><div class="pi__body"><p class="pi__brand">アップリカ</p><h4 class="pi__name">リライド AC</h4><p class="pi__kind">チャイルド＆ジュニアシート</p><ul class="pi__pts"><li>R129適合・ISOFIX</li><li>カップホルダー付き</li></ul><p class="pi__price"><b>29,700</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-mug.jpg" alt="" width="40" height="40" loading="lazy"><span>レビューで<br>マグセットがもらえる</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00098/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00353/" target="_blank" rel="noopener"><img src="images/t-auton.jpg" alt="コンビ オートN セカンド QC" width="600" height="600" loading="lazy"><span class="pi__age">生後6カ月〜48カ月</span></a><div class="pi__body"><p class="pi__brand">コンビ</p><h4 class="pi__name">オートN セカンド QC</h4><p class="pi__kind">B型ベビーカー</p><ul class="pi__pts"><li>リクライニング</li><li>フロントガード標準装備</li></ul><p class="pi__price"><b>29,900</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-mug.jpg" alt="" width="40" height="40" loading="lazy"><span>レビューで<br>マグセットがもらえる</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00353/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00320/" target="_blank" rel="noopener"><img src="images/t-pactpro.jpg" alt="ジョイー パクト プロ" width="600" height="600" loading="lazy"><span class="pi__age">新生児〜4歳頃</span></a><div class="pi__body"><p class="pi__brand">ジョイー</p><h4 class="pi__name">パクト プロ</h4><p class="pi__kind">A型ベビーカー</p><ul class="pi__pts"><li>専用レインカバー・収納バッグ付き</li><li>幅47cmのコンパクト設計</li></ul><p class="pi__price"><b>24,800</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-mug.jpg" alt="" width="40" height="40" loading="lazy"><span>レビューで<br>マグセットがもらえる</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00320/" target="_blank" rel="noopener">商品ページを見る</a></article>
+<article class="pi"><a class="pi__img" href="https://item.rakuten.co.jp/babuuu/bgoods-00279/" target="_blank" rel="noopener"><img src="images/t-iavana.jpg" alt="ジョイー アイ・アバーナ" width="600" height="600" loading="lazy"><span class="pi__age">15カ月〜12歳頃</span></a><div class="pi__body"><p class="pi__brand">ジョイー</p><h4 class="pi__name">アイ・アバーナ</h4><p class="pi__kind">チャイルドシート</p><ul class="pi__pts"><li>R129適合</li><li>ISOFIX対応</li></ul><p class="pi__price"><b>26,280</b><span>円</span><small>税込・送料無料</small></p></div><p class="pi__perk"><img src="images/g-mug.jpg" alt="" width="40" height="40" loading="lazy"><span>レビューで<br>マグセットがもらえる</span></p><a class="pi__go" href="https://item.rakuten.co.jp/babuuu/bgoods-00279/" target="_blank" rel="noopener">商品ページを見る</a></article>
+      </div>
+    </section>
+
+    <!-- ===== 推しアイテム総選挙（告知だけ） ===== -->
+    <section class="blk soon" id="senkyo">
+      <div class="soon__in">
+        <p class="soon__tag">COMING<br>SOON</p>
+        <div><p class="soon__ttl">推しアイテム総選挙</p><p class="soon__txt">babuuu.の人気アイテムに投票できる企画を準備中です。おたのしみに。</p></div>
       </div>
     </section>
 
     <!-- ===== しめ ===== -->
-    <section class="end">
-      <div class="end__cake" aria-hidden="true">
-        <div class="candles candles--s"><i></i><i></i><i></i></div>
-        <div class="cake"><i></i><i></i></div>
-      </div>
-      <p class="end__msg">これからも<br>babuuu.をよろしくお願いします</p>
+    <section class="blk end">
+      <svg class="cakey" aria-hidden="true" viewBox="0 0 170 230" role="presentation">
+          <g class="cakey__flames">
+            <path d="M52 30c-7 8-7 16 0 18 7-2 7-10 0-18z"/><path d="M85 18c-8 9-8 18 0 20 8-2 8-11 0-20z"/><path d="M118 30c-7 8-7 16 0 18 7-2 7-10 0-18z"/>
+          </g>
+          <g stroke="#4A4F54" stroke-width="4">
+            <rect x="46" y="48" width="12" height="34" rx="3" fill="#6FC0E4"/><rect x="79" y="38" width="12" height="44" rx="3" fill="#FF6B97"/><rect x="112" y="48" width="12" height="34" rx="3" fill="#FFCB2E"/>
+          </g>
+          <g class="cakey__arm cakey__arm--l"><path d="M28 140 L6 118" stroke="#4A4F54" stroke-width="6" stroke-linecap="round" fill="none"/><circle cx="6" cy="116" r="8" fill="#fff" stroke="#4A4F54" stroke-width="4"/></g>
+          <g class="cakey__arm cakey__arm--r"><path d="M142 140 L166 112" stroke="#4A4F54" stroke-width="6" stroke-linecap="round" fill="none"/><circle cx="166" cy="110" r="8" fill="#fff" stroke="#4A4F54" stroke-width="4"/></g>
+          <path d="M44 196v24M126 196v24" stroke="#4A4F54" stroke-width="6" stroke-linecap="round"/>
+          <ellipse cx="40" cy="222" rx="13" ry="7" fill="#EC5586" stroke="#4A4F54" stroke-width="4"/><ellipse cx="130" cy="222" rx="13" ry="7" fill="#EC5586" stroke="#4A4F54" stroke-width="4"/>
+          <rect x="24" y="80" width="122" height="120" rx="16" fill="#FFF6D6" stroke="#4A4F54" stroke-width="4"/>
+          <path d="M24 108v-12c0-9 7-16 16-16h90c9 0 16 7 16 16v12c-8 0-8 12-16 12s-8-12-16-12-8 14-17 14-8-14-17-14-8 12-16 12-8-12-17-12-8 12-16 12-8-12-15-12z" fill="#FFB9CD" stroke="#4A4F54" stroke-width="4" stroke-linejoin="round"/>
+          <g class="cakey__eyes" fill="#4A4F54"><ellipse cx="66" cy="148" rx="5.5" ry="7.5"/><ellipse cx="104" cy="148" rx="5.5" ry="7.5"/></g>
+          <path d="M74 164q11 12 22 0" stroke="#4A4F54" stroke-width="4" stroke-linecap="round" fill="#EC5586"/>
+          <circle cx="50" cy="164" r="7" fill="#FF6B97" opacity=".55"/><circle cx="120" cy="164" r="7" fill="#FF6B97" opacity=".55"/>
+        </svg>
+      <p class="end__msg"><span class="nw">これからも</span><span class="nw">babuuu.をよろしくお願いします</span></p>
       <a class="end__btn" href="https://www.rakuten.co.jp/babuuu/" target="_blank" rel="noopener">babuuu. トップページへ</a>
     </section>
   </main>
 </div>
 
-<script src="campaign-data.js"></script>
-<script src="app.js"></script>
+<script src="anniv.js"></script>
 </body>
 </html>
