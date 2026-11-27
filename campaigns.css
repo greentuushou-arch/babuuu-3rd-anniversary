@@ -1,0 +1,114 @@
+/* キャンペーン02〜04（ディズニー傘／新生児応援／初めてのトライ応援）
+   C案のFVと同じく、色の面・墨の線・大きなJostの数字でポップに */
+.cp{position:relative;padding:60px 16px 56px;overflow:hidden;isolation:isolate;scroll-margin-top:0}
+.cp .cno b{color:var(--c-no,var(--pink-d))}
+.cp__state{display:table;margin:12px auto 0;padding:3px 20px;background:var(--ink);color:#fff;font-weight:600;font-size:18px;letter-spacing:.1em}
+.cp__state:empty{display:none}
+.cp[data-state="closed"] .cp__state{background:#8A9096}
+.cp__pre{margin-top:14px;font-weight:600;font-size:19px;line-height:1.6}
+.cp__ttl{margin-top:10px;font-weight:700;font-size:40px;line-height:1.3;letter-spacing:.08em}
+.cp__lead{margin-top:10px;font-weight:600;font-size:18px}
+.cp__term{display:table;margin:22px auto 0;padding:8px 22px 10px;background:#fff;border:3px solid var(--ink);font-weight:600;font-size:18px;line-height:1.3}
+.cp__term b{font:600 36px/1 var(--num);letter-spacing:.02em;margin:0 .04em}
+.cp__term i{font-style:normal;margin:0 .3em}
+.cp__term-h{display:block;font-size:16px;color:var(--pink-d);letter-spacing:.14em;margin-bottom:4px}
+.cp__h3{margin-top:40px;font-weight:700;font-size:24px;letter-spacing:.1em}
+.cp__h3 b{font:600 34px/1 var(--num);color:var(--pink-d);margin:0 .06em}
+.cp__note{margin-top:14px;font-size:15px;line-height:1.7}
+
+/* ===== 02 ディズニーグッズ ===== */
+.cp--disney{background:var(--blue);--c-no:#fff}
+.cp--disney::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle,rgba(255,255,255,.22) 0 5px,transparent 6px) 0 0/36px 36px}
+.cp--disney .cp__ttl{display:table;margin:12px auto 0;padding:8px 20px;background:#fff;border:3px solid var(--ink);font-size:34px}
+.umb{position:relative;width:220px;margin:26px auto 0}
+.umb svg{display:block;width:100%;height:auto;transform-origin:50% 90%;animation:sway2 3.2s ease-in-out infinite}
+@keyframes sway2{50%{transform:rotate(-5deg)}}
+.umb__label{position:absolute;right:-26px;bottom:6px;padding:2px 12px;background:var(--yellow);border:3px solid var(--ink);font-weight:700;font-size:16px}
+.cp__gift{margin-top:18px;font-weight:700;font-size:22px;line-height:1.5}
+.cp__gift b{display:block;font-size:42px;letter-spacing:.06em;color:#fff;-webkit-text-stroke:6px var(--ink);paint-order:stroke fill}
+.num99{max-width:480px;margin:22px auto 0;background:#fff;border:3px solid var(--ink)}
+.num99__row{display:flex;justify-content:center;align-items:baseline;gap:4px;padding:12px 8px 6px;font-weight:700;font-size:20px}
+.num99__row b{font:600 56px/1 var(--num);color:var(--blue-d)}
+.num99__row i{font-style:normal;font-size:28px;margin:0 6px}
+.num99__total{display:flex;justify-content:center;align-items:baseline;gap:4px;padding:8px 8px 12px;background:var(--yellow);border-top:3px solid var(--ink);font-weight:700;font-size:20px}
+.num99__total b{font:600 76px/1 var(--num);color:var(--pink-d)}
+.cp__info{max-width:480px;margin:18px auto 0;display:grid;gap:8px}
+.cp__info div{display:flex;flex-direction:column;align-items:center;padding:10px 12px;background:rgba(255,255,255,.88)}
+.cp__info dt{font-weight:700;font-size:15px;color:var(--blue-d);letter-spacing:.14em}
+.cp__info dd{margin:0;font-weight:600;font-size:17px;line-height:1.6}
+/* 12/24・25のにおわせ（中身はまだ見せない） */
+.tease{position:relative;max-width:420px;margin:30px auto 0;padding:20px 16px 18px;background:var(--ink);color:#fff;border:3px dashed var(--yellow)}
+.tease__date{font-weight:600;font-size:22px;color:var(--yellow)}
+.tease__date b{font:600 40px/1 var(--num)}
+.tease__txt{margin-top:8px;font-size:16px;line-height:1.7}
+
+/* ===== 03 新生児 / 04 初めてのトライ ===== */
+.cp--newborn{background:var(--yellow);--c-no:var(--pink-d)}
+.cp--try{background:var(--pink-p);--c-no:var(--pink-d)}
+.cp--try::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle,rgba(255,107,151,.16) 0 5px,transparent 6px) 0 0/36px 36px}
+/* プレゼント品（style.cssの.giftはギフト箱の絵なので別名） */
+.present{display:grid;grid-template-columns:44% 1fr;align-items:center;gap:16px;max-width:520px;margin:22px auto 0;padding:14px;background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
+.present__img{margin:0;aspect-ratio:1;background:#fff;overflow:hidden}
+.present__img img{display:block;width:100%;height:100%;object-fit:contain}
+.present__brand{font:500 16px/1.3 var(--num);letter-spacing:.06em;color:#6A7075}
+.present__name{margin-top:4px;font-weight:700;font-size:18px;line-height:1.5}
+.present__cnt{display:flex;justify-content:center;align-items:center;gap:4px;margin-top:10px;padding:8px 4px;background:var(--pink-d);color:#fff;font-weight:700;font-size:16px;line-height:1.3}
+.present__cnt b{font:600 54px/1 var(--num);color:var(--yellow)}
+.present__cnt span:last-child{text-align:left}
+/* 3ステップ */
+.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:520px;margin:26px auto 0}
+.flow li{position:relative;padding:12px 4px 14px;background:#fff;border:3px solid var(--ink);font-weight:600;font-size:15px;line-height:1.5}
+.flow li b{display:block;font:600 32px/1.1 var(--num);color:var(--pink-d)}
+.flow li+li::before{content:"";position:absolute;left:-15px;top:50%;margin-top:-7px;border:7px solid transparent;border-left:9px solid var(--ink)}
+/* 対象商品（1点ずつ大きく：写真・特長・価格・ボタン） */
+.items{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.pi{display:flex;flex-direction:column;background:#fff;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);line-height:1.5}
+.pi__img{position:relative;display:block;aspect-ratio:1;background:#fff;border-bottom:3px solid var(--ink);overflow:hidden}
+.pi__img img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .3s}
+.pi__img:hover img{transform:scale(1.04)}
+.pi__ph{display:grid;place-items:center;height:100%;background:#F4F5F5;font-size:16px;color:#6A7075}
+.pi__new{position:absolute;left:0;top:0;padding:4px 14px;background:var(--pink-d);color:#fff;font-style:normal;font-weight:700;font-size:16px;letter-spacing:.1em}
+.pi__age{position:absolute;right:0;bottom:0;padding:3px 12px;background:var(--ink);color:#fff;font-weight:600;font-size:14px}
+.pi__body{display:flex;flex-direction:column;flex:1;padding:14px 14px 16px}
+.pi__brand{font-size:15px;color:#6A7075;letter-spacing:.06em}
+.pi__name{font-weight:700;font-size:21px;line-height:1.35;word-break:keep-all;overflow-wrap:anywhere}
+.pi__kind{display:table;margin:6px auto 0;padding:1px 12px;background:var(--c-kind,var(--yellow-l));font-weight:600;font-size:14px}
+.pi__pts{list-style:none;padding:0;margin:10px 0 0;font-size:15px;line-height:1.6;flex:1}
+.pi__pts li+li{margin-top:2px}
+.pi__pts li::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;border-radius:50%;background:var(--pink);vertical-align:2px}
+.pi__price{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;margin-top:12px;font-weight:700;line-height:1.1}
+.pi__price b{font:600 44px/1 var(--num);letter-spacing:.01em;color:var(--pink-d)}
+.pi__price span{font-size:22px;margin-left:2px}
+.pi__price small{flex-basis:100%;margin-top:4px;font-size:14px;font-weight:500;color:#4A4F54}
+.pi__price--tbd b{font:700 24px/1.3 var(--goth);color:#6A7075}
+.pi__go{position:relative;display:block;margin-top:12px;padding:12px 30px 12px 12px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;font-size:17px;letter-spacing:.08em;transition:background .15s}
+.pi__go::after{content:"";position:absolute;right:16px;top:50%;width:9px;height:9px;margin-top:-5px;border-top:3px solid #fff;border-right:3px solid #fff;transform:rotate(45deg)}
+.pi__go:hover,.pi__go:focus-visible{background:var(--pink-d)}
+.pi__go[aria-disabled]{pointer-events:none;background:#B9BFC3}
+.cp--newborn .pi{--c-kind:var(--yellow-l)}
+.cp--try .pi{--c-kind:var(--pink-l)}
+
+@media (max-width:520px){
+  .cp{padding:56px 12px 52px}
+  .cp__ttl{font-size:32px}
+  .cp--disney .cp__ttl{font-size:26px;padding:8px 14px}
+  .cp__pre{font-size:17px}
+  .cp__lead{font-size:17px}
+  .umb{width:180px}
+  .umb__label{right:-34px;font-size:15px}
+  .cp__gift{font-size:19px}
+  .cp__gift b{font-size:36px}
+  .num99__row{font-size:17px}
+  .num99__row b{font-size:46px}
+  .num99__total{font-size:17px}
+  .num99__total b{font-size:64px}
+  .cp__term{font-size:16px;padding:8px 14px 10px}
+  .cp__term b{font-size:30px}
+  .present{grid-template-columns:1fr;max-width:300px;gap:10px}
+  .present__cnt b{font-size:50px}
+  .flow{gap:14px}
+  .flow li{font-size:14px;padding:10px 2px 12px}
+  .items{grid-template-columns:1fr;gap:22px;max-width:340px;margin-left:auto;margin-right:auto}
+  .pi__name{font-size:22px}
+  .pi__price b{font-size:46px}
+}

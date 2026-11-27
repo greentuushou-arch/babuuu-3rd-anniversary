@@ -1,0 +1,36 @@
+/* FV 案B：写真×見上げる3（参考: Hubble 3rd Anniversary / リンネル15周年）
+   babuuu.の写真の男の子が、壁に浮かぶピンクの巨大な3を見上げる。文字は写真の外の黄の面に置く */
+.fvb{background:var(--yellow);padding:0 0 40px}
+.fvb__photo{position:relative;aspect-ratio:920/700;overflow:hidden;background:#EDEFEF}
+.fvb__img{display:block;width:100%;height:100%;object-fit:cover;animation:photoIn 1.2s ease-out backwards}
+@keyframes photoIn{from{opacity:0;transform:scale(1.06)}}
+.fvb__logo{position:absolute;right:5%;top:6%;width:24%;height:auto}
+.fvb__three{position:absolute;left:5%;top:15%;width:34%}
+.fvb__3{display:block;font:700 min(250px,39vw)/.76 var(--num);color:var(--pink-d);letter-spacing:0;animation:three .8s cubic-bezier(.2,1.4,.4,1) .5s backwards}
+.fvb .candles{top:-26px;left:50%;transform:translateX(-56%) scale(.8)}
+/* 写真と黄の面のつなぎ: ピンクの帯がまたがる */
+.fvb__copy{position:relative;padding:0 16px}
+.fvb__pre{position:relative;top:-22px;display:table;margin:0 auto -6px;padding:4px 20px;background:var(--ink);color:#fff;font-weight:600;font-size:20px;letter-spacing:.16em}
+.fvb__pre b{font:600 28px/1 var(--num);color:var(--yellow);margin:0 .08em}
+.fvb__title{font-weight:700;line-height:1.2}
+.fvb__l1{display:table;margin:0 auto;padding:6px 26px;background:var(--pink-d);color:#fff;font-size:32px;letter-spacing:.12em;animation:pop .5s cubic-bezier(.2,1.4,.4,1) .8s backwards}
+.fvb__l2{display:block;margin-top:8px;font-size:66px;letter-spacing:.08em;color:var(--ink);animation:pop .5s cubic-bezier(.2,1.4,.4,1) .95s backwards}
+.fvb__lead{margin-top:14px;font-weight:600;font-size:20px;line-height:1.7}
+.fvb__lead b{font:600 30px/1 var(--num);color:var(--pink-d);margin:0 .04em}
+.fvb .fv__nav{margin-top:26px}
+
+@media (max-width:520px){
+  .fvb{padding-bottom:34px}
+  .fvb__logo{width:28%;top:5%}
+  .fvb__three{left:6%;top:24%}
+  .fvb__3{font-size:37vw}
+  .fvb .candles{top:-22px;transform:translateX(-58%) scale(.62)}
+  .fvb__copy{padding:0 12px}
+  .fvb__pre{font-size:17px}
+  .fvb__l1{font-size:24px;padding:5px 20px}
+  .fvb__l2{font-size:46px}
+  .fvb__lead{font-size:18px}
+}
+@media (max-width:370px){
+  .fvb__l2{font-size:42px}
+}

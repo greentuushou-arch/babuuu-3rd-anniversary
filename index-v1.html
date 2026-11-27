@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>babuuu. 3周年記念 3さいの誕生日を迎えました！</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Noto+Sans+JP:wght@400..800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PC：左レール（メニュー） -->
+<aside class="side side-l" aria-label="メニュー">
+  <div class="side-in">
+    <a href="https://www.rakuten.co.jp/babuuu/" target="_blank" rel="noopener"><img class="side__logo" src="images/logo.png" alt="babuuu." width="893" height="220"></a>
+    <p class="side__three"><b>3</b><span>周年記念</span></p>
+    <p class="side__ttl">3さいの誕生日を<br>迎えました！</p>
+    <nav class="guide" id="sideNav"></nav>
+  </div>
+</aside>
+
+<!-- PC：右レール（総選挙への近道） -->
+<aside class="side side-r" aria-label="推しアイテム総選挙">
+  <div class="side-in">
+    <a class="side-senkyo js-senkyo" href="#">
+      <span class="side-senkyo__no">キャンペーン <b>01</b></span>
+      <span class="side-senkyo__ttl">推しアイテム<br><em>総選挙</em></span>
+      <span class="side-senkyo__date js-senkyo-term"></span>
+      <span class="side-senkyo__go">会場へ</span>
+    </a>
+    <p class="side-r__note">ほかのキャンペーンも<br>順次公開します</p>
+  </div>
+</aside>
+
+<div class="page">
+  <p class="demo" id="demo" hidden>見本データで表示しています</p>
+
+  <!-- ===== FV ===== -->
+  <header class="fv">
+    <div class="fv__burst" aria-hidden="true"></div>
+    <div class="flags" aria-hidden="true"></div>
+    <div class="balloons" aria-hidden="true">
+      <i style="--c:#FF6B97;--x:6%;--d:0s"></i>
+      <i style="--c:#6FC0E4;--x:16%;--d:-1.4s"></i>
+      <i style="--c:#FFCB2E;--x:78%;--d:-.7s"></i>
+      <i style="--c:#EC5586;--x:88%;--d:-2.1s"></i>
+    </div>
+    <img class="fv__logo" src="images/logo.png" alt="babuuu." width="893" height="220">
+    <p class="fv__pre">オープン<b>3</b>周年記念</p>
+
+    <div class="fv__three" aria-hidden="true">
+      <div class="candles"><i></i><i></i><i></i></div>
+      <span class="fv__3" data-n="3">3</span>
+      <span class="fv__sai">さい</span>
+    </div>
+
+    <h1 class="fv__title">
+      <span class="fv__ribbon"><span>3さいの誕生日を</span></span>
+      <span class="fv__main">迎えました！</span>
+    </h1>
+    <p class="fv__lead">ありがとうの気持ちをこめて<br><b>12</b>月はお祝いキャンペーンを<br class="sp">つぎつぎ開催します</p>
+
+    <nav class="fv__nav" id="fvNav" aria-label="キャンペーン一覧"></nav>
+  </header>
+
+  <!-- ===== ごあいさつ ===== -->
+  <section class="thanks">
+    <h2>みなさまのおかげで<br>3さいになりました</h2>
+    <p><span class="nw">babuuu.は</span>2023年12月のオープンから、この12月で3周年を迎えました。<br class="pc">いつもご利用いただき、本当にありがとうございます。<br class="pc">日ごろの感謝をこめて、うれしいお祝い企画をご用意しました。</p>
+  </section>
+
+  <main>
+    <!-- ===== キャンペーン01 推しアイテム総選挙 ===== -->
+    <section class="senkyo" id="c1">
+      <div class="flags flags--w" aria-hidden="true"></div>
+      <p class="cno"><span>キャンペーン</span><b>01</b></p>
+      <p class="senkyo__state" id="senkyoState"></p>
+      <h2 class="senkyo__ttl"><span>推しアイテム</span><em>総選挙</em></h2>
+      <p class="senkyo__lead">babuuu.の人気12商品から<br>あなたの推しに<b>1</b>票を！</p>
+
+      <div class="senkyo__board" aria-hidden="true" id="board"></div>
+
+      <div class="senkyo__facts">
+        <div class="fact">
+          <p class="fact__h">投票期間</p>
+          <p class="fact__d js-senkyo-term"></p>
+        </div>
+        <div class="fact fact--lot">
+          <p class="fact__h">期間中のお買い物で自動エントリー</p>
+          <p class="fact__d"><span class="nw">12商品が各<b>1</b>名様</span> <span class="nw">合計<b id="winners">12</b>名様に当たる</span></p>
+        </div>
+      </div>
+      <p class="senkyo__sched" id="senkyoSched"></p>
+
+      <a class="senkyo__go js-senkyo" href="#"><span>総選挙の会場へ</span></a>
+      <p class="senkyo__note" id="senkyoNote"></p>
+    </section>
+
+    <!-- ===== キャンペーン02〜（準備中の枠） ===== -->
+    <section class="more" id="more">
+      <h2 class="more__ttl">まだまだ続く<br>お祝いキャンペーン</h2>
+      <p class="more__lead">内容は決まりしだい <span class="nw">このページでお知らせします</span></p>
+      <div class="boxes" id="boxes"></div>
+    </section>
+
+    <!-- ===== しめ ===== -->
+    <section class="end">
+      <div class="end__cake" aria-hidden="true">
+        <div class="candles candles--s"><i></i><i></i><i></i></div>
+        <div class="cake"><i></i><i></i></div>
+      </div>
+      <p class="end__msg">これからも<br>babuuu.をよろしくお願いします</p>
+      <a class="end__btn" href="https://www.rakuten.co.jp/babuuu/" target="_blank" rel="noopener">babuuu. トップページへ</a>
+    </section>
+  </main>
+</div>
+
+<script src="campaign-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
