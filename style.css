@@ -5,7 +5,7 @@
 *{box-sizing:border-box;margin:0}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
-body{background:var(--pink-p) radial-gradient(circle,var(--pink-l) 0 4px,transparent 5px) 0 0/34px 34px;color:var(--ink);font:450 17px/1.85 var(--goth);letter-spacing:.06em;text-align:center;overflow-x:hidden}
+body{background:var(--pink-p);color:var(--ink);font:450 17px/1.85 var(--goth);letter-spacing:.06em;text-align:center;overflow-x:hidden}
 a{color:inherit}
 img{max-width:100%}
 h2{font-weight:600;line-height:1.4;letter-spacing:.1em}
